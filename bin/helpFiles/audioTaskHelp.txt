@@ -1,0 +1,103 @@
+<html>
+<body>
+<h1>Welcome to the Auditory Task Help System!</h1>
+<h2>About Auditory Task </h2>
+<p>This application is designed to generate auditory stimuli and record user responses.</p>
+<h2>User Interface </h2>
+<p>The program starts with the <b>'Experimental Setup'</b> panel containing a menu bar, text fields, 'Reset', 'Set Volume', 'Instructions', 'Practice', 'Run Block' buttons and a drop-down list for block selection.
+The menu bar is equipped with the three drop-down menu controls namely 'File', 'Edit' and 'Help'. </p>
+<p>The 'Choose Folder' command in the 'File' menu allows users to specify the location for storing data files. 
+If no folder is selected, the program creates a folder with study name in the same directory where the program is stored. </p>
+<p>The 'Advanced Options' command in the 'Edit' menu invokes the window, allowing to specify  stimulus duration, delay, pre-stimulus and intertrial intervals as well as to decide whether the subject's response will be self-paced or timed (set by default). The panel consists of six fields for setting up the screen fonts as well as experimental, instruction/practice session and trigger parameters.</p>
+<p>The Help menu contains 'Help Contents' and 'About' commands.</p>
+<p>The text input boxes in the <b>'Experimental Setup'</b> panel include:</p>
+<ul>
+<li><b>Subject number</b> -- for specifying the participant id (can be any integer). Empty by default.</li>
+<li><b>Session number</b> -- allows to discriminate between different sessions for the same subject. Set to 1 by default.</li>
+</ul>
+<p>The 'Set Volume' button allows to play the stimulus sound for every frequency in the specified range. Move the slider to listen to the sound for any frequency and adjust the volume of your computer to a comfortable level. To exit the sound adjustment mode simply close the window or press 'ESC.'</p>
+<p>The 'Reset' button sets the 'Subject number' and 'Session number' to their default values.</p>
+<p>'Instructions' and 'Practice' buttons are designed for running the Information and Practice session separately. Also, the drop-down list allows to specify which block of the actual experimental trials to run. Modifying the 'Number of runs' on the 'Advanced Options' window also changes the number of blocks presented in this drop-down list.</p> 
+<h3>Experiment Parameters</h3>
+</p>The 'Experiment Parameters' field contains the following text inputs: </p>
+<ul>
+<li><b>Study ID#</b> -- sets the unique ID for the study, by default it is set to BECA (bets ecog - auditory) </li>
+<li><b>Study version</b> -- provides version control for the study. Set to 1 by default.</li>
+<li><b>Number of trials in experiment</b> -- specifies the total number of trials for this session. Set to 100 by default.</li>
+<li><b>Number of runs</b> -- allows to set the number of blocks. Must be multiple of the number of trials. Set to 5 by default.</li>
+<li><b>Number of sample frequencies</b>  -- specifies the number of stimuli frequencies to generate for each run, set to 5 by default. In order to ensure the uniform distribution of sample frequencies across runs and trials, their number must be a multiple of the number of trials per run, i.e. of the (number of trials)/(number of runs).</li>
+<li><b>Jitter</b> -- specifies the spread of generated stimuli frequencies around each of the logarithmically separated central values. Default value is 1 in equal temperament scale indices (to allow the jitter interval to stretch for the higher frequency tones).</li>
+<li><b>Number of bets per trial</b> -- specifies the number of bets per each trial. Set to 6 by default.</li>
+<li><b>Max points per bet</b> -- for setting the maximum amount of points the subject can earn for each bet. 100 by default.</li>
+<li><b>Min. frequency</b> -- the lowest of stimuli frequencies to generate, 400 Hz by default.</li>
+<li><b>Max. frequency</b> -- the highest of stimuli frequencies to generate, 1000 Hz by default.</li>
+</ul>
+<h3>Task Duration Parameters</h3>
+<p>The 'Task Duration Parameters' field is designed to specify the duration of all significant intervals used in the experiment. Contains the following inputs:</p>
+<ul>
+<li><b>Prestimulus fixation</b> -- an interval before stimulus sound is played, aimed to attract user focus to the center of the screen. 0.5 sec by default.</li>
+<li><b>Sample</b> -- specifies the duration of sound played. The default value is 250 msec.</li>
+<li><b>Delay</b> -- an interval between stimulus sound and probe. 2.5 seconds by default.</li>
+<li><b>Probe</b> -- in case if the trials are timed, a subject has a limited amount of time to submit his/her answer for each guess. Set to 20 seconds. If the 'Self-paced probe task' option is chosen -- the textbox gets disabled.</li>
+<li><b>Intertrial interval</b> -- the time between two trials, set to 2 seconds.</li>
+</ul>
+<h3>Instruction/Practice session parameters</h3>
+<p>The 'Instruction/Practice session parameters' field allows to modify the number of trials with one bet, the number of trials for practicing bets placement as well as the number of untimed and timed trials.</p>
+<p>The user can also decide whether all the trials will be self-paced or timed by choosing between corresponding options on the 'Set timed or untimed response' field. Please note that 'Timed probe task' and 'Self-paced probe task' options are mutually exclusive. If one is checked -- the other one automatically becomes unchecked and vice versa. Also, the checked radio-button gets disabled to prevent users clicking it several times. If the 'Self-paced probe task' option is chosen, the 'Probe duration' textfield also becomes disabled. Also, if the 'Self-paced probe task' is selected, all trials for the practice session will be untimed.</p>
+<h3>Specify the font of the screen</h3>
+<p>This field allows the user to select a font from all the font families installed on the computer running the program. By default, the font size is set to 26 and the font family is 'Times New Roman'. However, the font size varies depending on the selected style. To get an idea how the instructions will appear on the screen, first save all the changes by pressing the 'Apply' button and then press the 'Set Volume' on the 'Experiment Setup' window to preview instructions. </p>
+<h3>Trigger Parameters</h3>
+<p>The 'Trigger Parameters' field helps to set the size and position of a white square for triggering photodiode signals on the screen. By default, the photodiode trigger is on and flashes every time a stimulus sound starts playing and every time the subject submits  his/her response. 
+The <b>Trigger Parameters</b> panel contains the information about screen resolution, four textfields to specify the trigger size and position and control buttons for previewing the trigger, applying the setup to the experiment and resetting the parameters to zeros. </p>
+<p>To set up the trigger position, please select one of the radiobuttons depending on which corner of the screen the trigger has to be placed. </p>  
+<p>Please note that all radiobuttons except the "Other" prevent the user from modifying the trigger's leftmost angle coordinates. Choosing the "Other" option allows to place the trigger in any point of the screen. In this case it is necessary to specify the width and the height of the square as well as its position on the screen. Following the widespread convention, the trigger square position is determined by coordinates of its left corner. For example, if it is necessary to place a 100 px X 100 px trigger in the upper left corner of the screen, the 'Left Corner X' and  'Left Corner Y' fields have to be set to zeros and the 'Trigger width' and 'Trigger height' fields -- to 100 px and 100 px correspondingly. In the case of the upper right corner of the screen, the 'Left Corner Y' field is set to zero and the 'Left Corner X' is set to Screen width minus the width of the trigger. For the lower left corner the 'Left Corner X' is zero and 'Left Corner Y' is set to Screen height minus the trigger height. In the case of the lower right corner, both square width and height are subtracted form 'Left Corner X' and 'Left Corner Y' correspondingly. </p>
+<p>By default, the trigger is 150 px X 150 px and appears in the bottom left corner of the screen.</p>
+<p>Pressing the 'Preview' button opens a full screen window as it will appear during the experiments. To close the window press 'ESC' or 'q'.</p>
+<p>All parameter input fields, except for the 'Subject Number' from the 'Experiment Setup' window prevent the user from entering non-numeric characters. Input fields for max and min frequencies are equipped with a tooltip balloon showing the range of allowed values.</p>
+<p>To save all the parameters press the 'Apply.' Any attempts to close the 'Advanced Options' window will produce a popping up warning, asking user whether he/she wants to save the modified parameters. Pressing the 'Yes' button is equivalent to 'Apply' and saves all the recent modifications. Choosing the 'No' will result in closing the 'Advanced Options' panel without saving the recently modified values. Closing the pop-up will leave the 'Advanced Options' panel opened. </p>
+<p>The Reset button sets the experimental parameters back to their default values.</p>
+<h2>Running the program </h2>
+<p>The program starts as soon as 'Instructions,' 'Practice' or 'Run Block' button is pressed. Pressing the 'Instructions' button invokes the introductory session, aiming to prepare the subject for the actual experiment. By default, it consists of the trial with one bet and two trials for practicing bet placements. The 'Practice' button invokes the practice trials, four by default, with the first two trials untimed. The experimenter can easily modify these parameters by changing the corresponding values on the 'Practice session parameters' filed from the 'Advanced Options' window. If the 'Self-paced probe task' is selected on the 'Advanced Options' panel, all trials for the practice session will be untimed. Note that the program will inform you if any of the modules has been run more than once. Attempting to run the same module (or the same block) again will result in showing the pop-up window, telling you how many times the module has been run and asking whether you want to continue with running the same module one more time. </p>
+<p> Program quits if the 'ESC' or 'q' keys are pressed or if there was no key pressed within 90 minutes. When the corresponding block is selected and the 'Run Block' button is clicked, the Intertrial blank window appears for 2 seconds, followed by a pre-stimulus window with a fixation dot in the center of the screen. Then, for 250 ms (adjustable from 'Advanced Options' menu) the subject listens to a stimulus tone generated with randomly selected logarithmically spaced tone or semitone frequency.
+ The brief stimulus tone is followed by the delay activity window, lasting for 2.5 seconds. For the upcoming probe activity, the subject is expected to use the touchpad or mouse for specifying the perceived stimulus tone frequency.</p>
+<p>During the probe activity, swiping the touchpad or moving the mouse will result in playing a continuous simple tone of random frequency. The tone frequency (pitch) changes while the subject keeps moving the mouse. As soon as the subjects select a proper frequency, they can submit their response by clicking the mouse or tapping the touchpad.
+Pressing the 'ESC' or 'q' keys at the probe stage, results in quitting the program (the previous trials responses are saved in the report file). If the subject's responses are self-paced -- the probe screen waits for 90 minutes. If within this time no mouse key has been clicked -- the program quits, showing the termination message and saving the responses for previous trials. If the responses are timed, the probe screen is available only for 20 seconds (by default), then the program moves to another trial. In this case both response, reaction time and error for this trial are set to NaN. </p>
+<p>At the end of each block the window asks the subject to click the mouse or tap the touchpad to exit. If left unattended -- exits the program within 15 seconds.</p>
+<p>The report is saved either in the user-specified folder or, by default, in the program folder, where the program creates a folder with the Study Id, i.e. 'BECA'. In this folder, for each new user, the program creates a subfolder with a user ID, say 'ST45,' containing the 'Data,' 'Logs,' 'Practice' and 'TaskMaps' subfolders. Currently, the naming convention of the file is</p>
+<p> [study Id][study version][subject number][session number]_DDMMYYHHMMSS_block[blockNumber].txt,</p>
+<p>where DDMMYYHHMMSS is the timestamp, preventing the data files from overwritting. For example 'BECA1ST541_013017155712_block5.txt'.</p>
+<p>You can find the report files for blocks in the 'Data' folder. The log file containing current session experimental parameters is saved in the 'Logs' folder using the similar naming convention, with '_log' added to the end, e.g. BECA1ST541_013017155712_block5_log.txt. The task map is stored in 'TaskMaps' folder with '_tm' postfix. Both log, tm and report files for practice session are preceded by 'p_' prefix and can be found in the 'Logs', 'TaskMaps' and 'Practice' folders correspondingly. The report file for practice session contains subject's answers for all practice trials.</p>
+<h2>Generating Sample Frequencies </h2>
+<p>Currently, the program generates logarithmically equidistant frequencies, selected according to <a href=https://en.wikipedia.org/wiki/Equal_temperament>equal temperament scale</a>. In this case, the frequency doubles every 12 notes. The following relationship between the note index p and the note frequency f applies:</p>
+<p>F = 440*2<sup>(p-69)/12</sup></p>
+<p>The inverse formula for getting the note index p from the given frequency f is:</p>
+<p>p = 69+12*log<sub>2</sub>(f/440)</p>
+<p>where f is a given frequency and p is a corresponding note index. The note A in fifth octave is taken as an origin (f = 440 Hz and p=69).</p>
+<p>The Max and Min frequencies are used to specify n (where n is the number of sample frequencies) center points,  e.g. P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub>, P<sub>4</sub>, P<sub>5</sub> and P<sub>6</sub>, within [minFreqP, maxFreqP] interval, where minFreqP and maxFreqP are corresponding note indices.
+ Position of each  P<sub>i</sub>, i=1,..., n, where n -- number of sample frequencies is selected as:</p>
+<p>P<sub>i</sub> = minFreqP+(maxFreqP-minFreqP)/(n+1)*i</p>
+<p>The next stage is to add some random noise to the newly generated P<sub>i</sub> -s. For this purpose a jitter value (set in note indices) is added and subtracted from P<sub>i</sub>. Then the sample frequency index, say Prand<sub>i</sub>, is randomly selected from [ P<sub>i</sub> - jitter/2, P<sub>i</sub>+jitter/2] interval. Finally, the Prand<sub>i</sub> is converted to frequency in Hz according to the formula</p>
+<p>Frand<sub>i</sub> = 440*2<sup>(Prand<sub>i</sub>-69)/12</sup></p>
+<p>The randomly selected frequencies Frand<sub>i</sub>, i=1,..., n, are added to the list of all the sample frequencies across all trials. This list gets shuffled to avoid playing sample frequencies in increasing order.</p>
+<p>Please note, that the jitter interval, converted to Hz, increases for the higher frequencies. In order to ensure that jitters do not overlap -- always check whether the  max jitter value in Hz. is less then the max allowable jitter value, i.e.</p>
+<p>realJitterValue = 440*2<sup>(maxFreqP-0.5*jitter-69)/12</sup>-440*<sup>(maxFreqP-jitter-69)/12</sup></p>
+<p>allowedJitterValue = 440*2<sup>(maxFreqP-diffP-69)/12</sup>-440*2<sup>(maxFreqP-69)/12</sup></p>
+<p>where diffP = (maxFreqP-minFreqP)/(numFrequencies+1)</p>
+<p>and realJitterValue &lt allowedJitterValue.</p>
+<h2>Setting the full screen for MacOS users</h2>
+<p>Please note that MacOS prevents all windows to be displayed in the full-screen mode, leaving the menu and dock bars on top of the presentation window. To achieve the full-screen effect it is necessary to hide both the dock and the menu bar. To hide the dock bar go to 'System Preferences,' then to 'Dock,' and select 'Automatically hide and show the dock' option. To enable auto-hiding of the menu bar, open 'System Preferences,' click 'General' and check the 'Automatically hide and show' menu bar option.</p>
+<h2>Adjusting the audible tones to equal-loudness contour</h2>
+<p>The operating system settings must be changed to equalize the perception of different frequency tones. For example, in Windows 7 it is possible to achieve this by enabling a build-in 'Loudness Equalization' feature from the playback device properties (right-click on the dynamic icon on the taskbar, select 'Playback devices,' go to 'Properties', then click over to the 'Enhancements' tab and enable the 'Loudness Equalization' check box in the list).</p>
+<h2>Visit our Site</h2>
+<p><a href=http://sites.nyuad.nyu.edu/faculty/sreenivasan/>Sreenivasan Lab @nyuad</a></p>
+<h2>Contact us</h2>
+<p>With any questions, comments or concerns please contact Vahan Babushkin<br>
+Sreenivasan Lab, NYU Abu Dhabi<br>
+166D, Computational Research Building A2,<br>
+New York University Abu Dhabi,<br>
+Saadiyat Island, Abu Dhabi,<br> 
+United Arab Emirates<br>
+P.O. Box 129188<br>
+Mail: <a href="mailto:vahanbabushkin@gmail.com?Subject=Auditory%20Task%20Mail" target="_top">vahanbabushkin@gmail.com</a><br>
+Phone: +971 2 6284574</p>
+</body>

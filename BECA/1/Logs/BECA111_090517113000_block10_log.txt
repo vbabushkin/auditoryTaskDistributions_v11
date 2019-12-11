@@ -1,0 +1,45 @@
+Date                               09/05/2017 11:30:00
+Study ID                           BECA 
+Study version                      1    
+Session number                     1    
+Subject number                     1    
+Min frequency, Hz                  400.0
+Min frequency p index              67   
+Max frequency, Hz                  1000.0
+Max frequency p index              83   
+Number of frequencies              4    
+Jitter, p                          1.0  
+Stimulus task duration, ms         250  
+Pre-stimulus task duration, ms     500  
+Delay task duration, ms            2500 
+Intertrial task duration, ms       1000 
+Is probe task timed                true 
+Number of bets per trial           6    
+Highest score per one bet          100  
+Number of trials with one bet      1    
+Number of untimed trials           2    
+Number of timed trials             2    
+Number of trials for bet practice  2    
+Times practice repeated            0    
+Times instructions repeated        0    
+Probe task timer value             20000
+Display screen width, px           1440 
+Display screen height, px          900  
+Is photodiode trigger set          true 
+Trigger upper left corner X, px    0    
+Trigger upper left corner Y, px    750  
+Trigger width, px                  150  
+Trigger height, px                 150  
+Sigma                              15.0 
+Total score                        389.0
+Number of bets completed           24   
+Number of trials completed         4    
+Time elapsed, ms                   93954
+--------------------------------------------------------------------------------
+The generated frequencies are: 
+#         P-index   Frequency, Hz
+1         71        493.88    
+2         80        830.61    
+3         77        698.46    
+4         74        587.33    
+--------------------------------------------------------------------------------
